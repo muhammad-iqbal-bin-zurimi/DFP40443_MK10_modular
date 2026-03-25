@@ -4,7 +4,7 @@
 &copy; 2026 Sabri bin Saep
 </footer>
 
-<script src="assets/js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
