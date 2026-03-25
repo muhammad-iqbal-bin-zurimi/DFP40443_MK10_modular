@@ -1,24 +1,16 @@
 <?php include "config/produk.php"; ?>
 
-<h1>Selamat Datang</h1>
+<h1 class="title-center">Selamat Datang</h1>
 
-<div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+<div class="form-grid">
 
 <?php foreach($data as $produk): ?>
 
-<img src="gambar/<?= $produk['gambar'] ?>" width="150">
-
-<?php endforeach; ?>
-
+<div class="card-box">
+<img src="gambar/<?= $produk['gambar'] ?>" class="produk-img">
+<h3><?= $produk['nama'] ?></h3>
 </div>
 
-<div style="margin-top:40px;background:white;padding:30px;border-radius:8px">
-
-<h3>Cara Membuat Tempahan</h3>
-
-<p>
-Klik menu Tempah, pilih biskut dan kuantiti, masukkan nama,
-kemudian tekan Teruskan. Invois akan dipaparkan dan boleh dicetak.
-</p>
+<?php endforeach; ?>
 
 </div>
