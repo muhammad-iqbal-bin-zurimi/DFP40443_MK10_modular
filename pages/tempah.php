@@ -6,35 +6,35 @@
 
 <div class="form-grid">
 
-<?php foreach($data as $produk): ?>
+<?php foreach ($data as $produk): ?>
 
-<div class="card-box">
+    <div class="card-box">
 
-<img src="gambar/<?= $produk['gambar'] ?>" class="produk-img">
+        <img src="gambar/<?= $produk['gambar'] ?>" class="produk-img">
 
-<h3><?= $produk['nama'] ?></h3>
+        <h3><?= $produk['nama'] ?></h3>
 
-<?php foreach($produk['harga'] as $saiz=>$harga): ?>
+        <?php foreach ($produk['harga'] as $saiz => $harga): ?>
 
-<div class="row-between">
+        <div class="row-between">
 
-<div>
-<?= ucwords(str_replace('_',' ',$saiz)) ?><br>
-<span class="price">RM <?= number_format($harga,2) ?></span>
-</div>
+            <div>
+                <?= ucwords(str_replace('_', ' ', $saiz)) ?><br>
+                <span class="price">RM <?= number_format($harga, 2) ?></span>
+            </div>
 
-<input type="number"
-name="tempahan[<?= $produk['id'] ?>][<?= $saiz ?>]"
-value="0"
-min="0"
-data-price="<?= $harga ?>"
-class="qty-input">
+            <input type="number"
+                   name="tempahan[<?= $produk['id'] ?>][<?= $saiz ?>]"
+                   value="0"
+                   min="0"
+                   data-price="<?= $harga ?>"
+                   class="qty-input">
 
-</div>
+        </div>
 
-<?php endforeach; ?>
+        <?php endforeach; ?>
 
-</div>
+    </div>
 
 <?php endforeach; ?>
 
@@ -42,16 +42,16 @@ class="qty-input">
 
 <div class="summary-box">
 
-<div class="row-between">
-<span>Jumlah Harga:</span>
-<strong id="total-price">RM 0.00</strong>
-</div>
+    <div class="row-between">
+        <span>Jumlah Harga:</span>
+        <strong id="total-price">RM 0.00</strong>
+    </div>
 
-<label>Nama Penuh:</label>
+    <label>Nama Penuh:</label>
 
-<input type="text" name="nama_pelanggan" required class="full-input">
+    <input type="text" name="nama_pelanggan" required class="full-input">
 
-<button type="submit" class="full-btn">Teruskan</button>
+    <button type="submit" class="full-btn">Teruskan</button>
 
 </div>
 

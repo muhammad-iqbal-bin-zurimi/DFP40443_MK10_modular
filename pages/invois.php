@@ -1,11 +1,11 @@
 <?php
 
-if(!isset($_SESSION['invois_data'])){
-header("Location:index.php?menu=tempah");
-exit();
+if (!isset($_SESSION['invois_data'])) {
+    header("Location:index.php?menu=tempah");
+    exit();
 }
 
-$inv=$_SESSION['invois_data'];
+$inv = $_SESSION['invois_data'];
 ?>
 
 <h1 class="title-center">Invois</h1>
@@ -19,28 +19,28 @@ $inv=$_SESSION['invois_data'];
 <table class="table">
 
 <tr>
-<th>Produk</th>
-<th>Saiz</th>
-<th>Harga</th>
-<th>Qty</th>
-<th>Jumlah</th>
+    <th>Produk</th>
+    <th>Saiz</th>
+    <th>Harga</th>
+    <th>Qty</th>
+    <th>Jumlah</th>
 </tr>
 
-<?php foreach($inv['items'] as $i): ?>
+<?php foreach ($inv['items'] as $i): ?>
 
 <tr>
-<td><?= $i['nama_produk'] ?></td>
-<td><?= $i['saiz'] ?></td>
-<td class="text-right">RM <?= number_format($i['harga'],2) ?></td>
-<td class="text-center"><?= $i['qty'] ?></td>
-<td class="text-right">RM <?= number_format($i['jumlah'],2) ?></td>
+    <td><?= $i['nama_produk'] ?></td>
+    <td><?= $i['saiz'] ?></td>
+    <td class="text-right">RM <?= number_format($i['harga'], 2) ?></td>
+    <td class="text-center"><?= $i['qty'] ?></td>
+    <td class="text-right">RM <?= number_format($i['jumlah'], 2) ?></td>
 </tr>
 
 <?php endforeach; ?>
 
 <tr>
-<td colspan="4" class="text-right"><strong>Total</strong></td>
-<td class="text-right total">RM <?= number_format($inv['total'],2) ?></td>
+    <td colspan="4" class="text-right"><strong>Total</strong></td>
+    <td class="text-right total">RM <?= number_format($inv['total'], 2) ?></td>
 </tr>
 
 </table>

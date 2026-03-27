@@ -4,12 +4,12 @@
 
 <div class="form-grid">
 
-<?php foreach($data as $produk): ?>
+<?php foreach ($data as $produk): ?>
 
-<div class="card-box">
-<img src="gambar/<?= $produk['gambar'] ?>" class="produk-img">
-<h3><?= $produk['nama'] ?></h3>
-</div>
+    <div class="card-box">
+        <img src="gambar/<?= $produk['gambar'] ?>" class="produk-img">
+        <h3><?= $produk['nama'] ?></h3>
+    </div>
 
 <?php endforeach; ?>
 
